@@ -17,14 +17,14 @@ module.exports = {
     navbar: {
       title: 'huskyCI',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: 'huskyCI Logo',
+        src: 'img/logo.png',
       },
       links: [
         {to: 'docs/installation', label: 'Docs', position: 'left'},
         {to: 'blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/globocom/huskyci',
           label: 'GitHub',
           position: 'right',
         },
@@ -63,6 +63,7 @@ module.exports = {
       ],
       logo: {
         alt: 'Facebook Open Source Logo',
+
         href: 'https://opensource.facebook.com/',
       },
       copyright: `Copyright © ${new Date().getFullYear()} Globo.com`,
