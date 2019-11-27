@@ -6,6 +6,6 @@
     "API": [
       "doc-api-routes",
       "doc-api-env-vars"
-    ],
+    ]
   }
 }
