@@ -1,0 +1,11 @@
+{
+  "docs": {
+    "Getting Started": ["doc-installation"],
+    "Guides": ["doc2"],
+    "CLI": ["doc3"],
+    "API": [
+      "doc-api-routes",
+      "doc-api-env-vars"
+    ],
+  }
+}
