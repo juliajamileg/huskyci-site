@@ -7,7 +7,10 @@
 
 module.exports = {
   docs: {
-    Docusaurus: ['doc1', 'doc2', 'doc3'],
-    Features: ['mdx'],
+    "Getting Started": ['installation'],
+    Guides: ['guides-gitlabci'],
+    API: ['doc3'],
+    Client: ['doc3'],
+    Dashboard: ['doc3'],
   },
 };

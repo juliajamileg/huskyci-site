@@ -1,6 +1,7 @@
 ---
-id: doc2
-title: Document Number 2
+id: guides-gitlabci
+title: Using huskyCI within Gitlab CI
+label: Using huskyCI within Gitlab CI
 ---
 
 This is a link to [another document.](doc3.md)
