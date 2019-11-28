@@ -21,10 +21,10 @@ module.exports = {
         src: 'img/logo.png',
       },
       links: [
-        {to: 'docs/installation', label: 'Docs', position: 'left'},
-        {to: 'blog', label: 'Blog', position: 'left'},
+        {to: 'docs/overview', label: 'Docs', position: 'right'},
+        {to: 'blog', label: 'Blog', position: 'right'},
         {
-          href: 'https://github.com/globocom/huskyci',
+          href: 'https://github.com/globocom/huskyCI',
           label: 'GitHub',
           position: 'right',
         },
@@ -38,7 +38,7 @@ module.exports = {
           items: [
             {
               label: 'Docs',
-              to: 'docs/doc1',
+              to: 'docs/getting-started',
             },
           ],
         },
