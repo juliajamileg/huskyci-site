@@ -7,10 +7,10 @@
 
 module.exports = {
   docs: {
-    "Getting Started": ['installation'],
-    Guides: ['guides-gitlabci'],
-    API: ['doc3'],
-    Client: ['doc3'],
-    Dashboard: ['doc3'],
+    Welcome: ['welcome'],
+    "Quick Start": ['overview', 'setup-my-ci'],
+    Guides: ['guides-install-aws'],
+    "API Reference": ['api-routes'],
+    Development: ['dev-set-up-environment','dev-add-new-security-test'],
   },
 };
