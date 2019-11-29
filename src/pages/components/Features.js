@@ -1,4 +1,5 @@
 import React from "react";
+import classnames from 'classnames';
 import styles from '../styles.module.css';
 import Feature from './Feature';
 
@@ -56,7 +57,7 @@ export default function Features() {
       {features && features.length && (
         <section className={styles.features}>
           <div className="container">
-            <div className="row">
+            <div className={classnames('row', styles.justifiedFeatures)}>
               {features.map((props, idx) => (
                 <Feature key={idx} {...props} />
               ))}
