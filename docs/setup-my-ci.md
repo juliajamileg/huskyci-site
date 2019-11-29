@@ -1,14 +1,47 @@
 ---
 id: setup-my-ci
-title: Adding huskyCI into my CI
+title: Adding the huskyCI stage
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac euismod odio, eu consequat dui. Nullam molestie consectetur risus id imperdiet. Proin sodales ornare turpis, non mollis massa ultricies id. Nam at nibh scelerisque, feugiat ante non, dapibus tortor. Vivamus volutpat diam quis tellus elementum bibendum. Praesent semper gravida velit quis aliquam. Etiam in cursus neque. Nam lectus ligula, malesuada et mauris a, bibendum faucibus mi. Phasellus ut interdum felis. Phasellus in odio pulvinar, porttitor urna eget, fringilla lectus. Aliquam sollicitudin est eros. Mauris consectetur quam vitae mauris interdum hendrerit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+<p align="center"> <img src="../static/img/huskyci-stage.png" scale="10"/></p>
 
-Duis et egestas libero, imperdiet faucibus ipsum. Sed posuere eget urna vel feugiat. Vivamus a arcu sagittis, fermentum urna dapibus, congue lectus. Fusce vulputate porttitor nisl, ac cursus elit volutpat vitae. Nullam vitae ipsum egestas, convallis quam non, porta nibh. Morbi gravida erat nec neque bibendum, eu pellentesque velit posuere. Fusce aliquam erat eu massa eleifend tristique.
+Using huskyCI is simple. Your stage script only needs to download and execute a binary (written in Go) called `huskyci-client`. This client will perform several requests to huskyCI's API and act like a worker, regularly checking if all security tests have already finished and printing the results found to STDOUT.
 
-Sed consequat sollicitudin ipsum eget tempus. Integer a aliquet velit. In justo nibh, pellentesque non suscipit eget, gravida vel lacus. Donec odio ante, malesuada in massa quis, pharetra tristique ligula. Donec eros est, tristique eget finibus quis, semper non nisl. Vivamus et elit nec enim ornare placerat. Sed posuere odio a elit cursus sagittis.
+## Environment Variables
 
-Phasellus feugiat purus eu tortor ultrices finibus. Ut libero nibh, lobortis et libero nec, dapibus posuere eros. Sed sagittis euismod justo at consectetur. Nulla finibus libero placerat, cursus sapien at, eleifend ligula. Vivamus elit nisl, hendrerit ac nibh eu, ultrices tempus dui. Nam tellus neque, commodo non rhoncus eu, gravida in risus. Nullam id iaculis tortor.
+The following environment variables must be set so that `huskyci-client` can properly communicate with the API:
 
-Nullam at odio in sem varius tempor sit amet vel lorem. Etiam eu hendrerit nisl. Fusce nibh mauris, vulputate sit amet ex vitae, congue rhoncus nisl. Sed eget tellus purus. Nullam tempus commodo erat ut tristique. Cras accumsan massa sit amet justo consequat eleifend. Integer scelerisque vitae tellus id consectetur.
+* `HUSKYCI_CLIENT_REPO_URL` - The repository address of the project being tested.
+* `HUSKYCI_CLIENT_REPO_BRANCH` - The branch being tested. 
+* `HUSKYCI_CLIENT_API_ADDR` - The address of where the `huskyci-client` is being hosted.
+* `HUSKYCI_CLIENT_API_USE_HTTPS` - A boolean value to define if HTTPS is being used or not.
+* `HUSKYCI_CLIENT_TOKEN` - Token authorization to check if that CI is allowed to perfom tests.
+
+## GitLab CI/CD | GitLab
+
+It is highly recommended not hardcoding huskyCI environment variables into your `.gitlab-ci.yml` file. The best option is using GUI interface and mannually add them as follows:
+
+<p align="center"> <img src="../static/img/gitlab-env-vars.png" scale="10"/></p>
+
+### Useful Tips
+
+When setting up a stage in Gitlab CI/CD, there are a few interesting environment variables that can be used to help `huskyci-client` properly scan a particular branch (`CI_COMMIT_REF_NAME`) and repository (`$CI_PROJECT_PATH`). If you would like to check all these variables you should check the [official Gitlab documentation](https://docs.gitlab.com/ee/ci/variables/predefined_variables.html). 
+
+```bash
+HUSKYCI_CLIENT_REPO_URL: gitlab@gitlab.myorg.com:$CI_PROJECT_PATH.git
+HUSKYCI_CLIENT_REPO_BRANCH: $CI_COMMIT_REF_NAME
+```
+
+### Code Example
+
+```bash
+stages:
+    - huskyCI
+
+huskyCI:
+    stage: huskyCI
+    script:
+        - wget $HUSKYCI_CLIENT_URL/huskyci-client
+        - chmod +x huskyci-client
+        - ./huskyci-client
+```
