@@ -8,7 +8,7 @@
 module.exports = {
   title: 'huskyCI',
   tagline: 'Performing security tests inside your CI',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://github.com/globocom/huskyCI',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
   organizationName: 'globocom',
@@ -62,9 +62,9 @@ module.exports = {
         },
       ],
       logo: {
-        alt: 'Facebook Open Source Logo',
-
-        href: 'https://opensource.facebook.com/',
+        alt: 'Globo.com Logo',
+        src: 'img/showcases/globocom.svg',
+        href: 'http://globo.com/',
       },
       copyright: `Copyright © ${new Date().getFullYear()} Globo.com`,
     },
