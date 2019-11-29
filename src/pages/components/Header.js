@@ -13,7 +13,7 @@ export default function Headers() {
             <div className={styles.heroContainer}>
                 <h1 className={styles.heroContent}>
                     <img className={styles.heroImg} src={useBaseUrl('img/logo.png')} />
-                    <span className={styles.heroText}>huskyCI makes it easy to find <span className={styles.heroHighlight}>vulnerabilities</span> inside your CI</span>
+                    <span className={styles.heroText}>huskyCI makes it easy to find <span className={styles.heroHighlight}>vulnerabilities</span> inside your <span className={styles.heroHighlight}>CI</span></span>
                 </h1>
                 <div className={styles.heroButtons}>
                     <Link
