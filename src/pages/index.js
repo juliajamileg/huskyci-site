@@ -11,6 +11,8 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Features from './components/Features';
 import Header from './components/Header';
 import Showcases from './components/Showcases';
+import Languages from './components/Languages';
+import SecurityTests from './components/SecurityTests';
 import Contents from './components/Contents';
 
 function Home() {
@@ -23,6 +25,8 @@ function Home() {
       <Header />
       <main>
         <Features />
+        <Languages />
+        <SecurityTests />
         <Contents />
         <Showcases />
       </main>
