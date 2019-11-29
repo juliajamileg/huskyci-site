@@ -10,7 +10,7 @@ module.exports = {
   tagline: 'Orchestrating security tests inside your CI',
   url: 'https://github.com/globocom/huskyCI',
   baseUrl: '/',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon2.ico',
   organizationName: 'globocom',
   projectName: 'huskyCI',
   themeConfig: {
