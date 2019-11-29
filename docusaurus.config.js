@@ -7,7 +7,7 @@
 
 module.exports = {
   title: 'huskyCI',
-  tagline: 'Performing security tests inside your CI',
+  tagline: 'Orchestrating security tests inside your CI',
   url: 'https://github.com/globocom/huskyCI',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
@@ -63,10 +63,10 @@ module.exports = {
       ],
       logo: {
         alt: 'Globo.com Logo',
-        src: 'img/showcases/globocom.svg',
+        src: 'img/showcases/opensource-globocom.svg',
         href: 'http://globo.com/',
       },
-      copyright: `Copyright © ${new Date().getFullYear()} Globo.com`,
+      copyright: `Copyright © ${new Date().getFullYear()} Open Source Globo.com`,
     },
   },
   presets: [

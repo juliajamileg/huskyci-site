@@ -6,9 +6,9 @@ import styles from '../styles.module.css';
 export default function Feature({imageUrl, title, description}) {
     const imgUrl = useBaseUrl(imageUrl);
     return (
-        <div className={classnames('col col--4', styles.feature)}>
+        <div className={classnames('text--center col col--4', styles.feature)}>
             {imgUrl && (
-                <div className="text--center">
+                <div>
                 <img className={styles.featureImage} src={imgUrl} alt={title} />
                 </div>
             )}

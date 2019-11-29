@@ -4,32 +4,47 @@ import Feature from './Feature';
 
 const features = [
     {
+      title: <>Find Vulnerabilities</>,
+      imageUrl: 'img/undraw_bug_fixing_oc7a.svg',
+      description: (
+        <>
+          huskyCI starts multiple security tests in git repositories in order to find issues before the deployment.
+        </>
+      ),
+    },
+    {
       title: <>Easy to Use</>,
-      imageUrl: 'img/undraw_docusaurus_mountain.svg',
+      imageUrl: 'img/undraw_web_developer_p3e5.svg',
       description: (
         <>
-          Docusaurus was designed from the ground up to be easily installed and
-          used to get your website up and running quickly.
+          By adding a simple stage into your CI, test.
         </>
       ),
     },
     {
-      title: <>Focus on What Matters</>,
-      imageUrl: 'img/undraw_docusaurus_tree.svg',
+      title: <>Extensible</>,
+      imageUrl: 'img/undraw_logistics_x4dc.svg',
       description: (
         <>
-          Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-          ahead and move your docs into the <code>docs</code> directory.
+          huskyCI allows you to create your own security test! You can even set up any script runnable in a container and let huskyCI execute it.
         </>
       ),
     },
     {
-      title: <>Powered by React</>,
-      imageUrl: 'img/undraw_docusaurus_react.svg',
+      title: <>Open Source</>,
+      imageUrl: 'img/undraw_version_control_9bpv.svg',
       description: (
         <>
-          Extend or customize your website layout by reusing React. Docusaurus can
-          be extended while reusing the same header and footer.
+          huskyCI was born Open Source so that everyone can use, give feedback and contribute. Give it a try!
+        </>
+      ),
+    },
+    {
+      title: <>Metrics</>,
+      imageUrl: 'img/undraw_data_trends_b0wg.svg',
+      description: (
+        <>
+          Help the security team gather information about the health of your organization projects. 
         </>
       ),
     },
