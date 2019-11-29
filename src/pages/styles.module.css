@@ -10,6 +10,16 @@
  * and scoped locally.
  */
 
+:root {
+  --global-section-bg-color:  #f7f7f7;
+}
+
+[data-theme='dark'] {
+  --global-section-bg-color:  #070707;
+  --ifm-code-background: #595959;
+  --ifm-link-color: #aabb00;
+}
+
 .heroBanner {
   padding: 4rem 0;
   text-align: center;
@@ -36,7 +46,90 @@
   width: 100%;
 }
 
+.contents {
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+}
+
+.content {
+  padding: 80px 0px;
+  max-width: 1400px;
+}
+
+.contentImg {
+  max-width: 730px;
+}
+
+.imageAlignSide .contentImg {
+  -webkit-box-flex: 0;
+  flex: 0 1 500px;
+  max-width: 500px;
+}
+
+section:nth-of-type(even) {
+  background: var(--global-section-bg-color);
+}
+
 .featureImage {
   height: 200px;
   width: 200px;
+}
+
+.showcases {
+  padding: 0 20px;
+  text-align: center;
+  padding-bottom: 80px;
+}
+
+.showcases h2 {
+  color: #0669DE;
+  font-size: 30px;
+  line-height: 1em;
+  margin-top: 20px;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.showcase {
+  -webkit-box-align: center;
+  align-items: center;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-flow: row wrap;
+  -webkit-box-pack: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.showcase .link {
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  height: 180px;
+  margin: 5px;
+  padding: 5px;
+}
+
+
+.showcase .link img {
+  max-height: 110px;
+  padding: 20px;
+  width: 110px;
+  align-self: center;
+}
+
+.showcase .link .caption {
+  line-height: 20px;
+  height: 20px;
+}
+
+img {
+  border-style: none;
+  box-sizing: content-box;
+  max-width: 100%;
 }
