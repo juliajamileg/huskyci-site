@@ -28,3 +28,10 @@
   margin: 0 calc(-1 * var(--ifm-pre-padding));
   padding: 0 var(--ifm-pre-padding);
 }
+
+[data-theme='dark'] {
+  --ifm-menu-color-active: rgb(6, 222, 53);;
+  --ifm-link-color:rgb(6, 222, 53);
+  --ifm-navbar-link-hover-color: rgb(6, 222, 53);
+  --ifm-contents-link-color: rgb(6, 222, 53) !important;
+}
