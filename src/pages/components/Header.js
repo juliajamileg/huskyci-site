@@ -21,7 +21,7 @@ export default function Headers() {
                         'button button--secondary button--lg',
                         styles.getStarted,
                     )}
-                    to={useBaseUrl('docs/overview.md')}>
+                    to={useBaseUrl('docs/overview')}>
                     Get Started
                     </Link>
                     <iframe src="https://ghbtns.com/github-btn.html?user=globocom&amp;repo=huskyci&amp;type=star&amp;count=true&amp;size=large" width="160" height="30" title="GitHub Stars"></iframe>
