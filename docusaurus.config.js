@@ -22,7 +22,6 @@ module.exports = {
       },
       links: [
         {to: 'docs/overview', label: 'Docs', position: 'right'},
-        {to: 'blog', label: 'Blog', position: 'right'},
         {
           href: 'https://github.com/globocom/huskyCI',
           label: 'GitHub',
@@ -33,33 +32,33 @@ module.exports = {
     footer: {
       style: 'dark',
       links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Docs',
-              to: 'docs/getting-started',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'Social',
-          items: [
-            {
-              label: 'Blog',
-              to: 'blog',
-            },
-          ],
-        },
+        // {
+        //   title: 'Docs',
+        //   items: [
+        //     {
+        //       label: 'Docs',
+        //       to: 'docs/getting-started',
+        //     },
+        //   ],
+        // },
+        // {
+        //   title: 'Community',
+        //   items: [
+        //     {
+        //       label: 'Discord',
+        //       href: 'https://discordapp.com/invite/docusaurus',
+        //     },
+        //   ],
+        // },
+        // {
+        //   title: 'Social',
+        //   items: [
+        //     {
+        //       label: 'Github',
+        //       to: 'blog',
+        //     },
+        //   ],
+        // },
       ],
       logo: {
         alt: 'Globo.com Logo',
