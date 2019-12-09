@@ -7,32 +7,31 @@ import classnames from 'classnames';
 const contents = [
     {
         img: {
-            imageUrl: 'img/undraw_docusaurus_mountain.svg',
-            imgAlt: 'image description',
+            imageUrl: 'img/stage.png',
         },
         body: {
-            title: 'ASD123',
-            body: 'ASd123',
+            title: 'Add a security stage into your pipeline 🐼',
+            body: 'Let huskyCI client perform the required requests to the API by simply downloading and running it.',
         }
     },
     {
         img: {
-            imageUrl: 'img/undraw_docusaurus_mountain.svg',
+            imageUrl: 'img/vulns.png',
             imgAlt: 'image description',
         },
         body: {
-            title: 'ASD123',
-            body: 'ASd123',
+            title: 'Get a detailed information of files with issues 🧐',
+            body: 'If a vulnerility is found in a new push, huskyCI shows the severity, the file, the line, and many other useful information that could help developers fix it.',
         }
     },
     {
         img: {
-            imageUrl: 'img/undraw_docusaurus_mountain.svg',
+            imageUrl: 'img/pipeline.png',
             imgAlt: 'image description',
         },
         body: {
-            title: 'ASD123',
-            body: 'ASd123',
+            title: 'Fail the pipeline if vulnerabilities are found ❌',
+            body: 'Avoid deploying vulnerable code! huskyCI\'s stage will fail in case a new vulnerability is pushed into the repository before reaching production or even development environment.',
         }
     },
 ];

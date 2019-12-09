@@ -42,7 +42,7 @@ export default function SecurityTests(){
         <>
         {securityTests && securityTests.length && (
             <section className={styles.showcases}>
-                <h2>Available Security Tests</h2>
+                <h2>Security Tests Available</h2>
                 <div className={styles.showcase}>
                     {securityTests.map((props, idx) => (
                         <SecurityTest key={idx} {...props} />
