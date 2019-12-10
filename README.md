@@ -1,33 +1,49 @@
-# Website
+<h1 align="center">
+  <p align="center">huskyCI site</p>
+</h1>
 
-This website is built using Docusaurus 2, a modern static website generator.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/wiki/globocom/huskyCI/images/huskyCI-logo.png" align="center" height="" />
+  <!-- logo font: Anton -->
+</p>
 
-### Installation
+<p align="center">
+  <a href="https://github.com/rafaveira3/writing-and-presentations/blob/master/DEFCON-27-APP-SEC-VILLAGE-Rafael-Santos-huskyCI-Finding-security-flaws-in-CI-before-deploying-them.pdf"><img src="https://img.shields.io/badge/DEFCON%2027-AppSec%20Village-blueviolet"/></a>
+  <a href="https://www.blackhat.com/eu-19/arsenal/schedule/#huskyci-performing-security-tests-inside-your-ci-17792"><img src="https://img.shields.io/badge/Black%20Hat%20Arsenal-Europe%202019-black"/></a>
+</p>
 
-```
-$ yarn
-```
+This is the huskyCI product site and is inspired by [Docusaurus](https://docusaurus.io/en/). Please check [this repository](https://github.com/globocom/huskyCI) to check the huskyCI project. 
 
-### Local Development
+## Requirements
 
-```
-$ yarn start
-```
+### Node
 
-This command starts a local development server and open up a browser window. Most changes are reflected live without having to restart the server.
+If you don't have Node installed in your environment, follow the instructions [here](https://gist.github.com/d2s/372b5943bce17b964a79) for your correspondent OS.
 
-### Build
+### Yarn
 
-```
-$ yarn build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-### Deployment
-
-```
-$ GIT_USER=<Your GitHub username> USE_SSH=1 yarn deploy
+```sh
+npm install -g yarn
 ```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+## Installing
+
+```sh
+make install
+```
+
+## Running
+
+```sh
+make run
+```
+
+## Contributing
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process of submitting pull requests to huskyCI-dashboard.
+
+## License
+
+This project is licensed under the BSD 3-Clause "New" or "Revised" License - read [LICENSE](LICENSE) file for details.
+
+[Docker Install]:  https://docs.docker.com/install/
