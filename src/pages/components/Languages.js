@@ -5,22 +5,27 @@ import styles from '../styles.module.css';
 const languages = [
     {
         image: 'img/languages/go.png',
+        infoLink: 'https://golang.org/',
         pinned: true,
     },
     {
         image: 'img/languages/python.png',
+        infoLink: 'https://www.python.org/',
         pinned: true,
     },
     {
         image: 'img/languages/ruby.png',
+        infoLink: 'https://www.ruby-lang.org/',
         pinned: true,
     },
     {
         image: 'img/languages/javascript.png',
+        infoLink: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
         pinned: true,
     },
     {
         image: 'img/languages/java.png',
+        infoLink: 'https://www.java.com/pt_BR/about/whatis_java.jsp',
         pinned: true,
     },
 ];
