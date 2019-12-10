@@ -20,8 +20,8 @@ const contents = [
             imgAlt: 'image description',
         },
         body: {
-            title: 'Get a detailed information of files with issues 🧐',
-            body: 'If a vulnerility is found in a new push, huskyCI shows the severity, the file, the line, and many other useful information that could help developers fix it.',
+            title: 'Get detailed information of files with issues 🧐',
+            body: 'If a vulnerability is found in a new push, huskyCI shows the severity, the file, the line, and many other useful information that could help developers fix it.',
         }
     },
     {
