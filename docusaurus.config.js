@@ -14,6 +14,7 @@ module.exports = {
   organizationName: 'globocom',
   projectName: 'huskyCI',
   themeConfig: {
+    disableDarkMode: true,
     navbar: {
       title: 'huskyCI',
       logo: {
