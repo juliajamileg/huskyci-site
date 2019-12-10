@@ -23,7 +23,7 @@ The following environment variables must be set so that `huskyci-client` can pro
 
 It is highly recommended not hardcoding huskyCI environment variables into your `.gitlab-ci.yml` file. The best option is using GUI interface and mannually add them as follows:
 
-<p align="center"> <img src="/img/huskyci-stage.png" scale="10"/></p>
+<p align="center"> <img src="/img/gitlab-env-vars.png" scale="10"/></p>
 
 ### Useful Tips
 
