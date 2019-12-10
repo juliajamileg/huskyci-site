@@ -21,7 +21,11 @@ module.exports = {
         src: 'img/logo.png',
       },
       links: [
-        {to: 'docs/overview', label: 'Docs', position: 'right'},
+        {
+          to: 'docs/overview', 
+          label: 'Docs', 
+          position: 'right'
+        },
         {
           href: 'https://github.com/globocom/huskyCI',
           label: 'GitHub',

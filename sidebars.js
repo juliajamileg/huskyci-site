@@ -9,8 +9,8 @@ module.exports = {
   docs: {
     Welcome: ['welcome'],
     "Quick Start": ['overview', 'setup-my-ci'],
-    Guides: ['guides-install-aws'],
-    "API Reference": ['api-routes'],
-    Development: ['dev-set-up-environment','dev-add-new-security-test'],
+    Guides: ['guides-install-in-my-org'],
+    "API": ['api-routes', 'api-env-vars'],
+    Development: ['dev-set-up-environment'],
   },
 };

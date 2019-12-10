@@ -10,7 +10,7 @@ const contents = [
             imageUrl: 'img/stage.png',
         },
         body: {
-            title: 'Add a security stage into your pipeline 🐼',
+            title: 'Add a security stage into your pipeline',
             body: 'Let huskyCI client perform the required requests to the API by simply downloading and running it.',
         }
     },
@@ -20,7 +20,7 @@ const contents = [
             imgAlt: 'image description',
         },
         body: {
-            title: 'Get detailed information of files with issues 🧐',
+            title: 'Get detailed information from issues',
             body: 'If a vulnerability is found in a new push, huskyCI shows the severity, the file, the line, and many other useful information that could help developers fix it.',
         }
     },
@@ -30,7 +30,7 @@ const contents = [
             imgAlt: 'image description',
         },
         body: {
-            title: 'Fail the pipeline if vulnerabilities are found ❌',
+            title: 'Fail the pipeline if vulnerabilities are found',
             body: 'Avoid deploying vulnerable code! huskyCI\'s stage will fail in case a new vulnerability is pushed into the repository before reaching production or even development environment.',
         }
     },
