@@ -15,7 +15,7 @@ Install `docker-engine`:
 ```sh
 yum install docker-engine
 ```
-Create a docker servide folder:
+Create a docker service folder:
 ```sh
 mkdir /etc/systemd/system/docker.service.d
 ```
@@ -23,7 +23,7 @@ Set these configuration into override.conf:
 ```sh
 vim /etc/systemd/system/docker.service.d/override.conf
 ```
-Add this content:
+Add this content to override.conf:
 ```
 [Service]
 ExecStart=
@@ -52,7 +52,7 @@ Download `create-certs.sh` script from huskyCI:
 ```sh
 wget https://raw.githubusercontent.com/globocom/huskyCI/master/deployments/scripts/create-certs.sh
 ```
-Set environment variable for certificates information:
+Set environment variables with certificate's information:
 ```
 echo 'export CERT_PASSPHRASE="mypassword$RANDOM"' > .env
 echo 'export CERT_DOCKER_API_HOST="address.to.dockerapi.host"' >> .env
@@ -78,10 +78,9 @@ Update override.conf configuration:
 ```
 vim /etc/systemd/system/docker.service.d/override.conf
 ```
-Add this new content:
+Add this new content to override.conf:
 ```
 [Service]
-ExecStart=
 ExecStart=/usr/bin/dockerd --tlsverify --tlscacert=/data/certs/ca.pem --tlscert=/data/certs/server-cert.pem --tlskey=/data/certs/server-key.pem -H fd:// -H tcp://0.0.0.0:2376
 ```
 Reload daemon:
@@ -96,7 +95,7 @@ Test secure docker API locally:
 ```sh
 curl -k https://localhost:2376/v1.24/version --cert /data/certs/client-cert.pem --key /data/certs/client-key.pem --cacert /data/certs/ca.pem
 ```
-You need now to save `ca.pem`, `client-key.pem` and `client-cert.pem` to be used in huskyCI host so it can connects to docker API securely! 🔒
+You need now to save `ca.pem`, `client-key.pem` and `client-cert.pem` to be used in huskyCI host so it can connect to docker API securely! 🔒
 
 #### Pulling images
 After setting up huskyCI Docker API, you can pull [huskyCI images](https://hub.docker.com/u/huskyci) into this host or let huskyCI do this automatically when receiving first requests (may take some time). If you prefer the first strategy, use the following commands:
