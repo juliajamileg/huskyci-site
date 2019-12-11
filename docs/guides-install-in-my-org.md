@@ -115,10 +115,19 @@ docker pull huskyci/brakeman
 docker pull huskyci/gosec
 ```
 ```
-docker pull huskyci/retirejs
+docker pull huskyci/spotbugs
 ```
 ```
 docker pull huskyci/npmaudit
+```
+```
+docker pull huskyci/yarnaudit
+```
+```
+docker pull huskyci/gitauthors
+```
+```
+docker pull huskyci/gitleaks
 ```
 
 ## huskyCI API ([tsuru](https://github.com/tsuru/tsuru) PaaS instructions)
