@@ -7,10 +7,10 @@
 
 module.exports = {
   docs: {
-    Welcome: ['welcome'],
-    "Quick Start": ['overview', 'setup-my-ci'],
-    Guides: ['guides-install-in-my-org'],
-    "API": ['api-routes', 'api-env-vars'],
-    Development: ['dev-set-up-environment'],
+    Welcome: ['welcome/about'],
+    "Quick Start": ['quickstart/overview', 'quickstart/setup-my-ci'],
+    Guides: ['guides/install-in-my-org', 'guides/gitleaks-allow-list'],
+    "API": ['api/routes', 'api/env-vars'],
+    Development: ['development/set-up-environment'],
   },
 };

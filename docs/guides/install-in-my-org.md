@@ -1,5 +1,5 @@
 ---
-id: guides-install-in-my-org
+id: install-in-my-org
 title: Installing in my organization
 ---
 

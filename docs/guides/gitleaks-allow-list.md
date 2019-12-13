@@ -1,0 +1,95 @@
+---
+id: gitleaks-allow-list
+title: Handling false positives (gitleaks)
+---
+
+Vulnerabilities may fail your CI pipeline even if you consider them as false positives. This section will guide you to overcome this situation when handling [`gitleaks`](https://github.com/zricethezav/gitleaks) issues. 
+
+### .gitleaks.toml
+
+As huskyCI uses [`gitleaks`](https://github.com/zricethezav/gitleaks) to audit git repositories for secrets, a `.gitleaks.toml` file can be used to add an allow list when needed. To do that, simply add this file into the root of your repository, as the following example:
+
+```yml
+title = "huskyCI gitleaks config"
+[whitelist]
+files = [
+    "(.*?)(jpg|gif|doc|pdf|bin)$",
+    "^vendor/(.*?)$",
+    ".gitleaks.toml",
+]
+commits = [
+    "444f28d5437ad3127702bf1b0779ae6cd00ab146",
+]
+```
+
+### Files
+
+The following examples can used to include files into the allow list using regex, as follows:
+
+```yml
+files = [
+    "(.*?)(jpg|gif|doc|pdf|bin)$",
+    "^vendor/(.*?)$",
+    ".gitleaks.toml",
+]
+```
+
+* `(.*?)(jpg|gif|doc|pdf|bin)$` will not consider any file that has these specific extensions.
+* `^vendor/(.*?)$` will not consider any file inside the `vendor/` folder.
+* `.gitleaks.toml` will not consider this particular file into the scan.
+
+### Commits
+
+The following example can used to include a particular commit into the allow list, as follows:
+
+```yml
+commits = [
+    "444f28d5437ad3127702bf1b0779ae6cd00ab146",
+]
+```  
+
+
+### Example
+
+Imagine that you have a `connect.go` file in your git repository with the commit hash `444f28d5437ad3127702bf1b0779ae6cd00ab146`:
+
+```go
+func ConnectDB() error {
+
+    username := "root"
+    password := "*hb123:0l"
+    host := "http://myinternal.url.to.host"
+    port := "3360"
+
+    err := mongoConnect(username, password, host, port)
+
+    return err
+}
+```
+
+After mitigating the vulnerability by invalidating the password, using a new one, and adding environment variables logic, your new code can look like this:
+
+```go
+func ConnectDB() error {
+
+    username :=  os.Getenv("DB_USER")
+    password := os.Getenv("DB_PASSWORD")
+    host := os.Getenv("DB_HOST")
+    port := os.Getenv("DB_PORT")
+
+    err := mongoConnect(username, password, host, port)
+
+    return err
+```
+
+When running huskyCI again, you may realize that [`gitleaks`](https://github.com/zricethezav/gitleaks) will still fail your CI, because the old commit `444f28d5437ad3127702bf1b0779ae6cd00ab146` stills has credentials in it. 
+
+The point is: you should **NOT** whitelist the `connect.go` file into  `.gitleaks.toml`! By doing that, any new hardcoded passwords in this file will not be checked anymore. The correct way is to add the commit itself:
+
+```yml
+title = "huskyCI gitleaks config"
+[whitelist]
+commit = [
+    "444f28d5437ad3127702bf1b0779ae6cd00ab146",
+]
+```

@@ -1,5 +1,5 @@
 ---
-id: welcome
+id: about
 title: About the Documentation
 ---
 

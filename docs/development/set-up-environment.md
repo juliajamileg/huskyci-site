@@ -1,9 +1,9 @@
 ---
-id: dev-set-up-environment
+id: set-up-environment
 title: Setting up your local environment
 ---
 
-Hey! 🐼 Thanks for having the will to hack huskyCI! The following instructions will help you set up your local environment to test and code this tool locally.
+The following instructions will help you set up your local environment to test and code this tool locally.
 
 ## Requirements
 
