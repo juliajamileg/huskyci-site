@@ -1,5 +1,5 @@
 ---
-id: api-routes
+id: routes
 title: Routes
 ---
 

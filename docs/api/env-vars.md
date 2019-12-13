@@ -1,5 +1,5 @@
 ---
-id: api-env-vars
+id: env-vars
 title: Environment Variables
 ---
 

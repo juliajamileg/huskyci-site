@@ -23,7 +23,7 @@ module.exports = {
       },
       links: [
         {
-          to: 'docs/overview', 
+          to: 'docs/quickstart/overview', 
           label: 'Docs', 
           position: 'right'
         },
