@@ -24,7 +24,7 @@ commits = [
 
 ### Files
 
-The following examples can used to include files into the allow list using regex, as follows:
+The following examples can be used to include files into the allow list using regex, as follows:
 
 ```yml
 files = [
