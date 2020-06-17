@@ -62,7 +62,12 @@ echo 'export CERT_HUSKYCI_HOST="address.to.huskyci.host"' >> .env
 . .env
 ```
 
-Create CA certificate: 
+Create CA certificate:
+
+```sh
+chmod +x create-certs.sh
+```
+
 ```sh
 ./create-certs.sh -m ca -pw $CERT_PASSPHRASE -t . -e 900
 ```
