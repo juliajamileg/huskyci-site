@@ -32,6 +32,8 @@ This section describes each environment variable that is used by huskyCI API. Us
 | HUSKYCI_API_ALLOW_ORIGIN_CORS | Domain to set CORS configuration | localhost |
 | HUSKYCI_API_ENABLE_HTTPS | Bool to initiate huskyCI API using TLS | false |
 | HUSKYCI_API_GIT_PRIVATE_SSH_KEY | Private SSH key used to clone authenticated git repositories | "" |
+| HUSKYCI_API_GIT_SSH_URL | Internal SSH URL that GoSec will use for cloning the internal repo | "" |
+| HUSKYCI_API_GIT_URL_TO_SUBSTITUTE | Internal repository HTTPS URL to be substituted by the SSH one | "" |
 | HUSKYCI_LOGGING_GRAYLOG_ADDR | Graylog server address | "" |
 | HUSKYCI_LOGGING_GRAYLOG_PROTO | Protocol used to send events to graylog | "" (use `tcp` or `udp`) |
 | HUSKYCI_LOGGING_GRAYLOG_APP_NAME | App name used for logging | "" |

@@ -9,7 +9,7 @@ module.exports = {
   docs: {
     Welcome: ['welcome/about'],
     "Quick Start": ['quickstart/overview', 'quickstart/setup-my-ci'],
-    Guides: ['guides/install-in-my-org', 'guides/integrating-with-sonar', 'guides/handling-false-positives'],
+    Guides: ['guides/install-in-my-org', 'guides/integrating-with-sonar', 'guides/handling-false-positives', 'guides/accessing-internal-repositories'],
     "API": ['api/routes', 'api/env-vars'],
     Development: ['development/set-up-environment'],
   },
