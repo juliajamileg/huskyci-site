@@ -36,8 +36,8 @@ When running the [yarn audit](https://classic.yarnpkg.com/en/docs/cli/audit/) se
 
 Add a `resolutions` field to your `package.json` file and define your version overrides, as shown by the image below:
 
-<p align="center"> 
-<img src="../../static/img/yarn_resolutions.png"/>
+<p align="center">
+<img src="/img/yarn_resolutions.png"/>
 </p>
 
 Then simply run `yarn install`. It's important to notice that if you define an invalid `resolution`, such as invalid package name or invalid version range, you will receive a warning.
