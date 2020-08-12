@@ -30,6 +30,7 @@
     ]
   },
   "resolutions": {
-    "elliptic": "^6.5.3"
+    "elliptic": "^6.5.3",
+    "serialize-javascript": "^3.1.0"
   }
 }
