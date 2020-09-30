@@ -17,7 +17,7 @@ A file named `.huskyci` can be placed on your project's root directory to be rea
 # Bandit ignore:
 tests/
 
-# Safety igonre:
+# Safety ignore:
 vendor/
 
 # Gosec ignore:
