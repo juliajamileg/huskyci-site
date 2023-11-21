@@ -7,13 +7,13 @@ title: Integrating with SonarQube
 
 ## Settings
 
-huskyCI can export its output to [SonarQube](https://www.sonarqube.org/) using CI artifacts. It is very important to mention that huskyCI's stage should be executed prior to the SonarQube's stage:
+HuskyCI can export its output to [SonarQube](https://www.sonarqube.org/) using CI artifacts. It is very important to mention that HuskyCI's stage should be executed prior to the SonarQube's stage:
 
 <p align="center"> <img src="/img/sonar-stage.png" scale="10"/></p>
 
 ### sonar-project.properties
 
-Add to the `sonar-project.properties` file the `sonar.externalIssuesReportPaths` flag to `./huskyCI/sonarqube.json` so that SonarQube can consume huskyCI JSON output:
+Add to the `sonar-project.properties` file the `sonar.externalIssuesReportPaths` flag to `./huskyCI/sonarqube.json` so that SonarQube can consume HuskyCI JSON output:
 
 ```yml
 sonar.externalIssuesReportPaths=./huskyCI/sonarqube.json
@@ -21,7 +21,7 @@ sonar.externalIssuesReportPaths=./huskyCI/sonarqube.json
 
 ### .gitlab-ci.yaml (Gitlab CI)
 
-If you are using Gitlab CI, we can use the `artifacts` configuration to let huskyCI generate the `sonarqube.json` file so that SonarQube can consume it:
+If you are using Gitlab CI, we can use the `artifacts` configuration to let HuskyCI generate the `sonarqube.json` file so that SonarQube can consume it:
 
 ```yml
 artifacts:
@@ -30,7 +30,7 @@ artifacts:
       - huskyCI # Is the folder in which sonarqube.json is generated and should be available for others stages.
 ```
 
-The final `.gitlab-ci.yaml` configuration to have both huskyCI and SonarQube run is the following: 
+The final `.gitlab-ci.yaml` configuration to have both HuskyCI and SonarQube run is the following: 
 
 ```yml
 stages:

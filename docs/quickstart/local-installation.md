@@ -1,29 +1,13 @@
 ---
-id: set-up-environment
-title: Setting up your local environment
+id: local-installation
+title: Local installation
 ---
 
 The following instructions will help you set up your local environment to test and code this tool locally.
 
-## Requirements
-
-### Docker and Docker-Compose
-
-The easiest way to deploy huskyCI locally is by using [Docker][Docker Install] and [Docker Compose][Docker Compose Install], thus you should have them installed on your machine.
-
-### Golang
-
-You must also have Golang installed to run and develop huskyCI. For Mac users you can install it via `brew`:
-
-```bash
-brew install golang
-```
-
-For more detailed information on how to install Go in other stacks, you should check this [official reference](https://golang.org/doc/install).
-
 ## Installing
 
-After forking and cloning the huskyCI repository, simply run the command inside huskyCI's folder:
+After forking and cloning the HuskyCI repository, simply run the command inside HuskyCI's folder:
 
 ```bash
 make install
@@ -31,7 +15,7 @@ make install
 
 ## Running
 
-After installing, a `.env` file with the environment variables required to run a POC huskyCI analysis should be generated:
+After installing, a `.env` file with the environment variables required to run a POC HuskyCI analysis should be generated:
 
 ```bash
 export HUSKYCI_CLIENT_REPO_URL="https://github.com/globocom/huskyCI.git"
@@ -123,15 +107,13 @@ If everything went well, you should see something similar to the following:
 
 ## Make
 
-huskyCI has some pre-defined functions that may help you locally develop awesome features. Simply run the following:
+HuskyCI has some pre-defined functions that may help you locally develop awesome features. Simply run the following:
 
 ```bash
 make
 ```
 
 ```bash
-huskyCI
-------
 $ make build-cli-linux: Builds CLI to the executable file huskyci-client
 $ make build-cli: Builds CLI to the executable file huskyci-client
 $ make build-client-linux: Builds client to the executable file huskyci-client
@@ -168,7 +150,3 @@ $ make run-client: Runs huskyci-client
 $ make test: Perfoms all make tests
 $ make update-containers: Builds and push securityTest containers with the latest tags
 ```
-
-
-[Docker Install]:  https://docs.docker.com/install/
-[Docker Compose Install]: https://docs.docker.com/compose/install/

@@ -7,7 +7,7 @@ title: Installing in my organization
 
 Set up a MongoDB using your desired OS/configuration (preferably secure 🐼).
 
-## huskyCI Docker API (CentOS instructions)
+## HuskyCI Docker API (CentOS instructions)
 
 #### Install docker API:
 
@@ -48,7 +48,7 @@ Create certificates folder:
 ```
 mkdir /data/certs && cd /data/certs
 ```
-Download `create-certs.sh` script from huskyCI:
+Download `create-certs.sh` script from HuskyCI:
 ```sh
 wget https://raw.githubusercontent.com/globocom/huskyCI/master/deployments/scripts/create-certs.sh
 ```
@@ -100,10 +100,10 @@ Test secure docker API locally:
 ```sh
 curl -k https://localhost:2376/v1.24/version --cert /data/certs/client-cert.pem --key /data/certs/client-key.pem --cacert /data/certs/ca.pem
 ```
-You need now to save `ca.pem`, `client-key.pem` and `client-cert.pem` to be used in huskyCI host so it can connect to docker API securely! 🔒
+You need now to save `ca.pem`, `client-key.pem` and `client-cert.pem` to be used in HuskyCI host so it can connect to docker API securely! 🔒
 
 #### Pulling images
-After setting up huskyCI Docker API, you can pull [huskyCI images](https://hub.docker.com/u/huskyci) into this host or let huskyCI do this automatically when receiving first requests (may take some time). If you prefer the first strategy, use the following commands:
+After setting up HuskyCI Docker API, you can pull [HuskyCI images](https://hub.docker.com/u/huskyci) into this host or let HuskyCI do this automatically when receiving first requests (may take some time). If you prefer the first strategy, use the following commands:
 ```
 docker pull huskyci/enry
 ```
@@ -135,7 +135,7 @@ docker pull huskyci/gitauthors
 docker pull huskyci/gitleaks
 ```
 
-## huskyCI API ([tsuru](https://github.com/tsuru/tsuru) PaaS instructions)
+## HuskyCI API ([tsuru](https://github.com/tsuru/tsuru) PaaS instructions)
 
 Go to huskyCI folder:
 ```
@@ -165,7 +165,7 @@ Set all environment variables needed ([complete list](https://github.com/globoco
 tsuru env-set MONGO_HOST=urlto.mongo.com -p
 ```
 
-If you want huskyCI to use HTTPS, generate `api-tls-cert.pem` and `api-tls-key.pem` before deploying. Also, you should set `HUSKY_API_ENABLE_HTTPS` environment variable to `true`. 
+If you want HuskyCI to use HTTPS, generate `api-tls-cert.pem` and `api-tls-key.pem` before deploying. Also, you should set `HUSKY_API_ENABLE_HTTPS` environment variable to `true`. 
 
 If you've decided to use the Docker API secure method mentioned above, you need to set these environment variables with the commands below:
 ```
@@ -174,19 +174,19 @@ tsuru env-set -p -a <my-app's-name> HUSKYCI_DOCKERAPI_CERT_KEY_VALUE ="$(cat /pa
 tsuru env-set -p -a <my-app's-name> HUSKYCI_DOCKERAPI_CERT_CA_VALUE ="$(cat /path/to/my/file)"
 ```
 
-Deploy huskyCI in tsuru (HTTP):
+Deploy HuskyCI in tsuru (HTTP):
 ```
 tsuru app-deploy -a huskyCI api/huskyci api/config.yaml Procfile
 ```
 
-Deploy huskyCI in Tsuru (HTTPS enabled):
+Deploy HuskyCI in Tsuru (HTTPS enabled):
 ```
 tsuru env-set -p -a <my-app's-name> HUSKYCI_DOCKERAPI_API_TLS_CERT_VALUE ="$(cat /path/to/my/file)"
 tsuru env-set -p -a <my-app's-name> HUSKYCI_DOCKERAPI_API_TLS_KEY_VALUE ="$(cat /path/to/my/file)"
 tsuru app-deploy -a huskyCI api/huskyci api/config.yaml Procfile
 ```
 
-## huskyCI Client ([tsuru](https://github.com/tsuru/tsuru) PaaS instructions)
+## HuskyCI Client ([tsuru](https://github.com/tsuru/tsuru) PaaS instructions)
 
 Build client locally (Linux binary): 
 ```sh
@@ -196,7 +196,7 @@ Create a static Tsuru app:
 ```sh
 tsuru app-create huskyCI-client static 
 ```
-Deploy huskyCI client in Tsuru:
+Deploy HuskyCI client in Tsuru:
 ```sh
 tsuru app-deploy -a huskyCI-client huskyci-client
 ```

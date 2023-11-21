@@ -1,89 +1,125 @@
-/**
- * Copyright (c) 2017-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
+// @ts-check
+// Note: type annotations allow type checking and IDEs autocompletion
 
-module.exports = {
-  title: 'huskyCI',
-  tagline: 'huskyCI makes it easy to find vulnerabilities inside your CI',
-  url: 'https://github.com/globocom/huskyCI',
+const lightCodeTheme = require('prism-react-renderer/themes/github');
+const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+
+/** @type {import('@docusaurus/types').Config} */
+const config = {
+  title: 'Husky CI',
+  tagline: 'Husky CI makes it easy to find vulnerabilities inside your CI',
+  // url: 'https://github.com/globocom/huskyCI',
   baseUrl: '/',
   favicon: 'img/favicon2.ico',
   organizationName: 'globocom',
-  projectName: 'huskyCI',
-  themeConfig: {
-    disableDarkMode: true,
-    navbar: {
-      title: 'huskyCI',
-      logo: {
-        alt: 'huskyCI Logo',
-        src: 'img/logo.png',
-      },
-      links: [
-        {
-          to: 'docs/quickstart/overview', 
-          label: 'Docs', 
-          position: 'right'
-        },
-        {
-          href: 'https://github.com/globocom/huskyCI',
-          label: 'GitHub',
-          position: 'right',
-        },
-      ],
-    },
-    footer: {
-      style: 'dark',
-      links: [
-        // {
-        //   title: 'Docs',
-        //   items: [
-        //     {
-        //       label: 'Docs',
-        //       to: 'docs/getting-started',
-        //     },
-        //   ],
-        // },
-        // {
-        //   title: 'Community',
-        //   items: [
-        //     {
-        //       label: 'Discord',
-        //       href: 'https://discordapp.com/invite/docusaurus',
-        //     },
-        //   ],
-        // },
-        // {
-        //   title: 'Social',
-        //   items: [
-        //     {
-        //       label: 'Github',
-        //       to: 'blog',
-        //     },
-        //   ],
-        // },
-      ],
-      logo: {
-        alt: 'Globo.com Logo',
-        src: 'img/showcases/opensource-globocom.svg',
-        href: 'https://opensource.globo.com/',
-      },
-      copyright: `Copyright © ${new Date().getFullYear()} Open Source Globo.com`,
-    },
+  projectName: 'Husky CI',
+  url: 'https://your-docusaurus-test-site.com',
+  
+
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'warn',
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en'],
   },
+  
   presets: [
     [
-      '@docusaurus/preset-classic',
-      {
+      'classic',
+      /** @type {import('@docusaurus/preset-classic').Options} */
+      ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-      },
+      }),
     ],
   ],
+
+  themeConfig:
+    ({
+      colorMode: {
+        defaultMode: 'light',
+        disableSwitch: true,
+        respectPrefersColorScheme: false,
+      },
+      navbar: {
+        title: 'HuskyCI',
+        logo: {
+          alt: 'huskyCI Logo',
+          src: 'img/logo.png',
+        },
+        hideOnScroll: false,
+        items: [
+          {
+            to: 'docs/overview/',
+            label: 'Docs',
+            position: 'right',
+          },
+          {
+            href: 'https://github.com/globocom/huskyCI',
+            label: 'GitHub',
+            position: 'right',
+          },
+        ],
+      },
+      footer: {
+        style: 'dark',
+        links: [
+          // {
+          //   title: 'Docs',
+          //   items: [
+          //     {
+          //       label: 'Tutorial',
+          //       to: '/docs/intro',
+          //     },
+          //   ],
+          // },
+          // {
+          //   title: 'Community',
+          //   items: [
+          //     {
+          //       label: 'Stack Overflow',
+          //       href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+          //     },
+          //     {
+          //       label: 'Discord',
+          //       href: 'https://discordapp.com/invite/docusaurus',
+          //     },
+          //     {
+          //       label: 'Twitter',
+          //       href: 'https://twitter.com/docusaurus',
+          //     },
+          //   ],
+          // },
+          // {
+          //   title: 'More',
+          //   items: [
+          //     {
+          //       label: 'Blog',
+          //       to: '/blog',
+          //     },
+          //     {
+          //       label: 'GitHub',
+          //       href: 'https://github.com/facebook/docusaurus',
+          //     },
+          //   ],
+          // },
+        ],
+        logo: {
+          alt: 'Globo.com Logo',
+          src: 'img/showcases/opensource-globocom.svg',
+          href: 'https://opensource.globo.com/',
+        },
+        copyright: `Copyright © ${new Date().getFullYear()} Open Source Globo.com`,
+      },
+      // prism: {
+      //   theme: lightCodeTheme,
+      //   darkTheme: darkCodeTheme,
+      // },
+    }),
 };
+
+module.exports = config;

@@ -1,7 +1,7 @@
 import React from "react";
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import classnames from 'classnames';
-import styles from '../styles.module.css';
+import styles from './styles.module.css';
 
 export default function Feature({imageUrl, title, description}) {
     const imgUrl = useBaseUrl(imageUrl);

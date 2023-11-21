@@ -36,8 +36,6 @@ curl -i localhost:8888/healthcheck
 WORKING
 ```
 
-[^](#top)
-
 ---
 
 <a name="getversion"></a>
@@ -55,8 +53,6 @@ curl -i localhost:8888/version
     "version":"0.1.2"
 }
 ```
-
-[^](#top)
 
 ---
 
@@ -230,9 +226,6 @@ curl -i localhost:8888/analysis/Ym3CjUl3H9nfaHbhaeXuEz7ILBtXiP0J
 ```
 {"error":"internal error","success":false}
 ```
-
-[^](#top)
-
 ---
 
 <a name="postanalysis"></a>
@@ -275,8 +268,6 @@ curl -i -H "Content-Type: application/json" -d '{"repositoryURL":"https://github
 {"error":"internal error","success":false}
 ```
 
-[^](#top)
-
 ---
 
 <a name="postsecuritytest"></a>
@@ -311,8 +302,6 @@ curl -i -H "Content-Type: application/json" -d '{"name":"newSecTest", "image":"h
 {"error":"internal error","success":false}
 ```
 
-[^](#top)
-
 ---
 
 <a name="postrepository"></a>
@@ -342,7 +331,5 @@ curl -i -H "Content-Type: application/json" -d '{"repositoryURL":"https://github
 ```
 {"error":"internal error","success":false}
 ```
-
-[^](#top)
 
 ---

@@ -3,7 +3,7 @@ id: env-vars
 title: Environment Variables
 ---
 
-This section describes each environment variable that is used by huskyCI API. Use your own organization configuration in each of them.
+This section describes each environment variable that is used by HuskyCI API. Use your own organization configuration in each of them.
 
 ## Required
 

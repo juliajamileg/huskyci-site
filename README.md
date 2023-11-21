@@ -1,7 +1,3 @@
-<h1 align="center">
-  <p align="center">huskyCI site</p>
-</h1>
-
 <p align="center">
   <img src="https://raw.githubusercontent.com/wiki/globocom/huskyCI/images/huskyCI-logo.png" align="center" height="" />
   <!-- logo font: Anton -->
@@ -12,7 +8,7 @@
   <a href="https://www.blackhat.com/eu-19/arsenal/schedule/#huskyci-performing-security-tests-inside-your-ci-17792"><img src="https://img.shields.io/badge/Black%20Hat%20Arsenal-Europe%202019-black"/></a>
 </p>
 
-This is the huskyCI product site and is inspired by [Docusaurus](https://docusaurus.io/en/). Please check [this repository](https://github.com/globocom/huskyCI) to check the huskyCI project. 
+This is the Husky CI product site and is inspired by [Docusaurus](https://docusaurus.io/). Please check [this repository](https://github.com/globocom/huskyCI) to check the Husky CI project. 
 
 ## Requirements
 
@@ -26,16 +22,10 @@ If you don't have Node installed in your environment, follow the instructions [h
 npm install -g yarn
 ```
 
-## Installing
-
-```sh
-make install
-```
-
 ## Running
 
 ```sh
-make run
+npm start
 ```
 
 ## Contributing

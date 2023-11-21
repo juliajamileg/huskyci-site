@@ -1,13 +1,13 @@
 ---
 id: setup-my-ci
-title: Adding the huskyCI stage
+title: Integrating HuskyCI into the pipeline
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 <p align="center"> <img src="/img/huskyci-stage.png" scale="10"/></p>
 
-Using huskyCI is simple. Your stage script only needs to download and execute a binary (written in Go) called `huskyci-client`. This client will perform several requests to huskyCI's API and act like a worker, regularly checking if all security tests have already finished and printing the results found to STDOUT.
+Using HuskyCI is simple. Your stage script only needs to download and execute a binary (written in Go) called `huskyci-client`. This client will perform several requests to HuskyCI's API and act like a worker, regularly checking if all security tests have already finished and printing the results found to STDOUT.
 
 ## Environment Variables
 
@@ -21,7 +21,7 @@ The following environment variables must be set so that `huskyci-client` can pro
 
 ## GitLab CI/CD | GitLab
 
-It is highly recommended not hardcoding huskyCI environment variables into your `.gitlab-ci.yml` file. The best option is using GUI interface and mannually add them as follows:
+It is highly recommended not hardcoding HuskyCI environment variables into your `.gitlab-ci.yml` file. The best option is using GUI interface and mannually add them as follows:
 
 <p align="center"> <img src="/img/gitlab-env-vars.png" scale="10"/></p>
 
