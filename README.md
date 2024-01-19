@@ -16,17 +16,17 @@ This is the Husky CI product site and is inspired by [Docusaurus](https://docusa
 
 If you don't have Node installed in your environment, follow the instructions [here](https://gist.github.com/d2s/372b5943bce17b964a79) for your correspondent OS.
 
-### Yarn
-
-```sh
-npm install -g yarn
-```
-
 ## Running
 
 ```sh
 npm start
-```
+``` 
+
+### Build 
+
+```sh
+npm run build
+``` 
 
 ## Contributing
 
