@@ -16,11 +16,11 @@ Variables application will be shown in [quickstart][Quickstart].
 
 ## Docker and Docker-Compose
 
-The easiest way to deploy huskyCI locally is by using [Docker][Docker Install] and [Docker Compose][Docker Compose Install], thus you should have them installed on your machine.
+The easiest way to deploy HuskyCI locally is by using [Docker][Docker Install] and [Docker Compose][Docker Compose Install], thus you should have them installed on your machine.
 
 ## Golang
 
-You must also have Golang installed to run and develop huskyCI. For Mac users you can install it via `brew`:
+You must also have Golang installed to run and develop HuskyCI. For Mac users you can install it via `brew`:
 
 ```bash
 brew install golang

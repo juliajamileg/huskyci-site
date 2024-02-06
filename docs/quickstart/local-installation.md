@@ -105,6 +105,16 @@ If everything went well, you should see something similar to the following:
 [HUSKYCI][*] Some HIGH/MEDIUM issues were found :(
 ```
 
+### HuskyCI Exit Codes
+
+After completing a scan, HuskyCI returns some codes according to the result found or errors during the process. By default, if no vulnerabilities are found, the exit code is 0. This code does not break the applications' pipeline.
+
+| Code | Meaning                                                         |
+|------|-----------------------------------------------------------------|
+| 0    | Scan completed successfully and no medium/high vulnerabilities were found |
+| 190  | Scan completed successfully and medium/high vulnerabilities were found     |
+
+
 ## Make
 
 HuskyCI has some pre-defined functions that may help you locally develop awesome features. Simply run the following:

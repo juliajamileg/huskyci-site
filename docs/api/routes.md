@@ -192,10 +192,6 @@ curl -i localhost:8888/analysis/Ym3CjUl3H9nfaHbhaeXuEz7ILBtXiP0J
       "banditoutput": {},
       "safetyoutput": {}
     },
-    "javascriptresults": {
-      "npmauditoutput": {},
-      "yarnauditoutput": {}
-    },
     "rubyresults": {
       "brakemanoutput": {}
     },

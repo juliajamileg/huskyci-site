@@ -120,19 +120,25 @@ docker pull huskyci/brakeman
 docker pull huskyci/gosec
 ```
 ```
-docker pull huskyci/spotbugs
+docker pull huskyci/trivy
 ```
 ```
-docker pull huskyci/npmaudit
+docker pull huskyci/tfsec
 ```
 ```
-docker pull huskyci/yarnaudit
+docker pull huskyci/securitycodescan
 ```
 ```
 docker pull huskyci/gitauthors
 ```
 ```
 docker pull huskyci/gitleaks
+```
+```
+docker pull huskyci/osvscanner
+```
+```
+docker pull huskyci/semgrep
 ```
 
 ## HuskyCI API ([tsuru](https://github.com/tsuru/tsuru) PaaS instructions)
