@@ -1,7 +1,8 @@
 
 import React from "react";
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import styles from '../styles.module.css';
+import styles from './styles.module.css';
+
 
 export default function Language({image, infoLink, caption, pinned}){
     const imgUrl = useBaseUrl(image);

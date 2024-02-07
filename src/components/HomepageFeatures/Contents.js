@@ -1,5 +1,5 @@
 import React from "react";
-import styles from '../styles.module.css';
+import styles from './styles.module.css';
 import ContentBody from './ContentBody';
 import ContentImg from './ContentImg';
 import classnames from 'classnames';
@@ -11,7 +11,7 @@ const contents = [
         },
         body: {
             title: 'Add a security stage into your pipeline',
-            body: 'Let huskyCI client perform the required requests to the API by simply downloading and running it.',
+            body: 'Let HuskyCI client perform the required requests to the API by simply downloading and running it.',
         }
     },
     {
@@ -21,7 +21,7 @@ const contents = [
         },
         body: {
             title: 'Get detailed information from issues',
-            body: 'If a vulnerability is found in a new push, huskyCI shows the severity, the file, the line, and many other useful information that could help developers fix it.',
+            body: 'If a vulnerability is found in a new push, HuskyCI shows the severity, the file, the line, and many other useful information that could help developers fix it.',
         }
     },
     {
@@ -31,7 +31,7 @@ const contents = [
         },
         body: {
             title: 'Fail the pipeline if vulnerabilities are found',
-            body: 'Avoid deploying vulnerable code! huskyCI\'s stage will fail in case a new vulnerability is pushed into the repository before reaching production or even development environment.',
+            body: 'Avoid deploying vulnerable code! HuskyCI\'s stage will fail in case a new vulnerability is pushed into the repository before reaching production or even development environment.',
         }
     },
 ];

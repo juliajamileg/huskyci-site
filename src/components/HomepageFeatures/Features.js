@@ -1,6 +1,6 @@
 import React from "react";
 import classnames from 'classnames';
-import styles from '../styles.module.css';
+import styles from './styles.module.css';
 import Feature from './Feature';
 
 const features = [
@@ -18,7 +18,7 @@ const features = [
       imageUrl: 'img/undraw_web_developer_p3e5.svg',
       description: (
         <>
-          Add a simple stage into your pipeline and huskyCI will find which security tests better suit the repository.
+          Add a simple stage into your pipeline and HuskyCI will find which security tests better suit the repository.
         </>
       ),
     },
@@ -27,7 +27,7 @@ const features = [
       imageUrl: 'img/undraw_logistics_x4dc.svg',
       description: (
         <>
-          Create your own security test and add it into huskyCI.
+          Create your own security test and add it into HuskyCI.
         </>
       ),
     },

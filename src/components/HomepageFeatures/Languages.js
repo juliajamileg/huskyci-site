@@ -1,6 +1,6 @@
 import React from "react";
 import Language from './Language';
-import styles from '../styles.module.css';
+import styles from './styles.module.css';
 
 const languages = [
     {
@@ -26,6 +26,21 @@ const languages = [
     {
         image: 'img/languages/java.png',
         infoLink: 'https://www.java.com/pt_BR/about/whatis_java.jsp',
+        pinned: true,
+    },
+    {
+        image: 'img/languages/terraform.svg',
+        infoLink: 'https://www.terraform.io/',
+        pinned: true,
+    },
+    {
+        image: 'img/languages/lua.png',
+        infoLink: 'https://www.terraform.io/',
+        pinned: true,
+    },
+    {
+        image: 'img/languages/csharp.png',
+        infoLink: 'https://www.terraform.io/',
         pinned: true,
     },
 ];
