@@ -12,13 +12,12 @@ jobs:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
       - uses: actions/checkout@v2
-        with:
-          submodules: true  # Fetch Hugo themes (true OR recursive)
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Install
+        run: npm install
 
       - name: Build
-        run: |
-          npm run build
+        run: npm run build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
