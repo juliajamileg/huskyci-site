@@ -9,7 +9,7 @@ const config = {
   title: 'Husky CI',
   tagline: 'Husky CI makes it easy to find vulnerabilities inside your CI',
   // url: 'https://github.com/globocom/huskyCI',
-  baseUrl: '/',
+  baseUrl: '/huskyci-site/',
   favicon: 'img/favicon2.ico',
   organizationName: 'globocom',
   projectName: 'Husky CI',
