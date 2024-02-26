@@ -4,15 +4,10 @@ import styles from './styles.module.css';
 
 const showcases = [
     {
-        image: 'img/showcases/globocom.svg',
+        image: 'img/showcases/globo.svg',
         infoLink: 'https://globo.com/',
         pinned: true,
-    },
-    {
-        image: 'img/showcases/williamHill.png',
-        infoLink: 'https://www.williamhill.com/',
-        pinned: true,
-    },
+    }
 ];
 
 export default function Showcases(){

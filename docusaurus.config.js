@@ -11,7 +11,7 @@ const config = {
   // url: 'https://github.com/globocom/huskyCI',
   baseUrl: '/huskyci-site/',
   favicon: 'img/favicon2.ico',
-  organizationName: 'globocom',
+  organizationName: 'globo',
   projectName: 'Husky CI',
   url: 'https://your-docusaurus-test-site.com',
   
@@ -71,7 +71,7 @@ const config = {
         ],
         logo: {
           alt: 'Globo.com Logo',
-          src: 'img/showcases/opensource-globocom.svg',
+          src: 'img/showcases/globoLogo.svg',
           href: 'https://opensource.globo.com/',
         },
         copyright: `Copyright © ${new Date().getFullYear()} Open Source Globo.com`,
