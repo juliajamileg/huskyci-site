@@ -8,8 +8,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Husky CI',
   tagline: 'Husky CI makes it easy to find vulnerabilities inside your CI',
-  url: 'https://github.com/globocom/huskyCI',
-  baseUrl: '/',
+  // url: 'https://github.com/globocom/huskyCI',
+  baseUrl: '/huskyci-site/',
   favicon: 'img/favicon2.ico',
   organizationName: 'globocom',
   projectName: 'Husky CI',
