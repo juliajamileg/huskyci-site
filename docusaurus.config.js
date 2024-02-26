@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Husky CI',
   tagline: 'Husky CI makes it easy to find vulnerabilities inside your CI',
-  // url: 'https://github.com/globocom/huskyCI',
+  url: 'https://github.com/globocom/huskyCI',
   baseUrl: '/',
   favicon: 'img/favicon2.ico',
   organizationName: 'globocom',
@@ -16,7 +16,7 @@ const config = {
   url: 'https://your-docusaurus-test-site.com',
   
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn', 
   onBrokenMarkdownLinks: 'warn',
   i18n: {
     defaultLocale: 'en',
@@ -68,45 +68,6 @@ const config = {
       footer: {
         style: 'dark',
         links: [
-          // {
-          //   title: 'Docs',
-          //   items: [
-          //     {
-          //       label: 'Tutorial',
-          //       to: '/docs/intro',
-          //     },
-          //   ],
-          // },
-          // {
-          //   title: 'Community',
-          //   items: [
-          //     {
-          //       label: 'Stack Overflow',
-          //       href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-          //     },
-          //     {
-          //       label: 'Discord',
-          //       href: 'https://discordapp.com/invite/docusaurus',
-          //     },
-          //     {
-          //       label: 'Twitter',
-          //       href: 'https://twitter.com/docusaurus',
-          //     },
-          //   ],
-          // },
-          // {
-          //   title: 'More',
-          //   items: [
-          //     {
-          //       label: 'Blog',
-          //       to: '/blog',
-          //     },
-          //     {
-          //       label: 'GitHub',
-          //       href: 'https://github.com/facebook/docusaurus',
-          //     },
-          //   ],
-          // },
         ],
         logo: {
           alt: 'Globo.com Logo',
@@ -115,10 +76,6 @@ const config = {
         },
         copyright: `Copyright © ${new Date().getFullYear()} Open Source Globo.com`,
       },
-      // prism: {
-      //   theme: lightCodeTheme,
-      //   darkTheme: darkCodeTheme,
-      // },
     }),
 };
 
